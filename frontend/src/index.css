@@ -1,0 +1,238 @@
+/* 全局样式 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* 应用容器 */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 主要内容区域 */
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 卡片样式增强 */
+.ant-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 上传区域样式 */
+.upload-area {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.upload-area.dragover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #667eea;
+  transform: scale(1.02);
+}
+
+/* 进度条样式 */
+.progress-container {
+  margin: 20px 0;
+}
+
+.ant-progress-line {
+  margin-bottom: 8px;
+}
+
+/* 结果展示区域 */
+.result-section {
+  margin-top: 24px;
+}
+
+.result-card {
+  margin-bottom: 16px;
+}
+
+/* 视频播放器样式 */
+.video-player-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 节拍可视化 */
+.beat-visualization {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.beat-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #667eea;
+  opacity: 0.7;
+}
+
+.beat-line.strong {
+  background: #ff4d4f;
+  width: 3px;
+  opacity: 1;
+}
+
+/* 动作列表 */
+.action-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.action-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.action-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.action-time {
+  color: #667eea;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.action-name {
+  font-weight: 600;
+  margin: 4px 0;
+  color: #333;
+}
+
+.action-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 难度标签 */
+.difficulty-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.difficulty-1 { background: #f6ffed; color: #52c41a; }
+.difficulty-2 { background: #fff7e6; color: #fa8c16; }
+.difficulty-3 { background: #fff1f0; color: #ff4d4f; }
+.difficulty-4 { background: #f0f5ff; color: #1890ff; }
+.difficulty-5 { background: #f9f0ff; color: #722ed1; }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 12px;
+  }
+  
+  .upload-area {
+    padding: 24px 16px;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
