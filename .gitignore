@@ -225,7 +225,7 @@ tmp/
 temp/
 
 # ===== 项目特定文件 =====
-# 上传的视频文件和处理结果
+# 上传的视频文件和处理结果（用户数据）
 uploads/videos/*.mp4
 uploads/videos/*.avi
 uploads/videos/*.mov
@@ -236,13 +236,23 @@ uploads/audio/*.mp3
 uploads/frames/*/
 uploads/temp/*/
 
-# 数据库文件
+# 但保留目录结构（空的 .gitkeep 文件）
+!uploads/videos/.gitkeep
+!uploads/audio/.gitkeep
+!uploads/frames/.gitkeep
+!uploads/temp/.gitkeep
+!backend/uploads/videos/.gitkeep
+!backend/uploads/audio/.gitkeep
+!backend/uploads/frames/.gitkeep
+!backend/uploads/temp/.gitkeep
+
+# 数据库文件（运行时生成）
 *.db
 *.sqlite
 *.sqlite3
 backend/dance_analysis.db
 
-# 机器学习模型文件
+# 机器学习模型文件（运行时下载）
 *.pkl
 *.joblib
 *.h5
@@ -253,9 +263,14 @@ models/
 backend/.env
 .env
 
-# 日志文件
+# 但保留配置模板
+!backend/.env.example
+
+# 日志文件（运行时生成）
 *.log
 logs/
+# 但保留日志目录
+!logs/.gitkeep
 
 # 临时文件
 *.tmp
@@ -266,6 +281,7 @@ Thumbs.db
 # ===== IDE / 编辑器 =====
 # VSCode
 .vscode/
+# 保留有用的VSCode配置
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
