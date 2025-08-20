@@ -186,8 +186,9 @@ android/app/build/generated/source/buildConfig/*/com/*/BuildConfig.java
 android/app/build/
 ios/build/
 
-# Gradle Wrapper
-!gradle/wrapper/gradle-wrapper.jar
+# Gradle Wrapper (排除jar文件以减少仓库大小)
+gradle/wrapper/gradle-wrapper.jar
+android/gradle/wrapper/gradle-wrapper.jar
 
 # Local configuration file (sdk path, etc)
 local.properties
