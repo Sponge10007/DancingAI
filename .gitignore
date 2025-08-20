@@ -332,3 +332,25 @@ android/app/src/debug/java/com/dancingai/ReactNativeFlipper.java
 # 错误日志
 crash-reports/
 error-logs/
+
+# 大文件 - 超过1MB的文件
+frontend/src/assets/test_mine.mp4
+frontend/src/assets/test_origin.mp4
+frontend/package-lock.json
+backend/GVHMR/tools/demo/colab_demo.ipynb
+backend/GVHMR/docs/example_video/project_teaser.gif
+backend/GVHMR/docs/example_video/tennis.mp4
+
+# 模型权重文件
+*.pt
+*.pth
+*.npz
+*.npy
+backend/GVHMR/hmr4d/dataset/bedlam/resource/
+backend/GVHMR/hmr4d/utils/body_model/
+
+# 大图片文件
+frontend/src/assets/icons/splash-bg.png
+frontend/src/assets/images/xxxxxxx.png
+frontend/src/assets/images/last_person.png
+frontend/src/assets/images/person_illustration.png
