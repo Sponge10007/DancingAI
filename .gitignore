@@ -282,3 +282,53 @@ dmypy.json
 # DancingAI项目特定文件
 # 如果您不想提交API密钥，请取消注释下面这行
 # src/config/api.ts
+
+# APK构建输出
+*.apk
+*.aab
+android/app/build/outputs/
+
+# 测试视频文件（大文件）
+frontend/src/assets/test*.mp4
+frontend/src/assets/videos/*.mp4
+frontend/src/assets/videos/*.mov
+frontend/src/assets/videos/*.avi
+
+# AI模型文件（如果有本地模型）
+*.model
+*.weights
+*.h5
+*.pb
+*.onnx
+
+# 用户上传的视频文件
+uploads/
+user_videos/
+temp_videos/
+
+# 分析结果缓存
+analysis_cache/
+*.analysis
+
+# 开发时的临时文件
+.vscode/settings.json
+.vscode/launch.json
+
+# React Native新架构相关
+android/app/build/generated/
+ios/build/
+
+# Metro bundler缓存
+.metro-health-check*
+metro-cache/
+
+# Flipper相关
+android/app/src/debug/java/com/dancingai/ReactNativeFlipper.java
+
+# 性能分析文件
+*.trace
+*.cpuprofile
+
+# 错误日志
+crash-reports/
+error-logs/
